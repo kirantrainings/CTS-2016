@@ -22,5 +22,18 @@ angular.module('register')
                 $scope.registerUser.countryCode = $scope.selectedCountry.code;
             }
             console.log($scope.registerUser);
-        }
+        };
+
+        $scope.userDetails = "Watch Me";
+        setTimeout(function () {
+            $scope.userDetails = "Hey I am cahanged";
+            $scope.$apply();
+        }, 5000);
+
+        $scope.$watch('userDetails', function (newVal, oldVal) {
+
+            console.log(newVal);
+            console.log(oldVal);
+        });
+
     }]);
