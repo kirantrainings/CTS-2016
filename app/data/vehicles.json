@@ -1,0 +1,20 @@
+{
+    "vehicles": [
+        {
+            "year": 2016,
+            "make": "Audi",
+            "model": "A5"
+        },
+        {
+            "year": 2016,
+            "make": "Benz",
+            "model": "c2000"
+        },
+        {
+            "year": 2016,
+            "make": "Nissan",
+            "model": "Terrano"
+        }
+
+    ]
+}

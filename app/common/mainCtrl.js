@@ -5,5 +5,8 @@ angular.module('common')
             if (type == 'vehicles') {
                 $scope.contentUrl = "app/vehicles/vehicle.html";
             }
+            if (type == 'register') {
+                $scope.contentUrl = "app/register/register.html";
+            }
         };
     }]);

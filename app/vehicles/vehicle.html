@@ -1,8 +1,16 @@
-<table class="table table-hover">
-    <th>
-        <td>S.No</td>
-        <td>Year</td>
-        <td>Make</td>
-        <td>Model</td>
-    </th>
-</table>
+<div ng-controller="vehicleCtrl">
+    <table class="table table-hover">
+        <th>
+            <td>S.No</td>
+            <td>Year</td>
+            <td>Make</td>
+            <td>Model</td>
+        </th>
+        <tr ng-repeat="vehicle in vehicles">
+            <td></td>
+            <td>{{vehicle.year}}</td>
+            <td>{{vehicle.make}}</td>
+            <td>{{vehicle.model}}</td>
+        </tr>
+    </table>
+</div>
