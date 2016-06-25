@@ -1,1 +1,1 @@
-angular.module('vehicleApp', ['common', 'register', 'vehicles']);
+angular.module('vehicleApp', ['common', 'register', 'vehicles', 'components']);
