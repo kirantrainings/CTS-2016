@@ -10,10 +10,11 @@
 
 <body>
     <div class="content" ng-controller="mainCtrl">
-        <div ng-include="'app/common/header.html'"> </div>
+        <!-- <div ng-include="'app/common/header.html'"> </div>-->
+        <app-header></app-header>
         <div ng-include="contentUrl"> </div>
     </div>
-    <app-header></app-header>
+
     <script src="app/vehicles/vehicles.js"></script>
     <script src="app/login/login.js"></script>
     <!--Register-->
@@ -30,6 +31,7 @@
     <!--Components-->
     <script src="app/components/components.js"></script>
     <script src="app/components/appHeader/appHeader.js"></script>
+    <script src="app/components/validators/alphabetsOnly.js"></script>
     <script src="app/app.js"></script>
 </body>
 
