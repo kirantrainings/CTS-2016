@@ -11,7 +11,7 @@
                     
                             */
                     element.bind('keypress', function (evt) {
-                        if ((evt.keyCode >= 65 && evt.keyCode <= 90) || (evt.keyCode >= 97 && evt.keyCode <= 122)) {
+                        if ((evt.charCode >= 65 && evt.charCode <= 90) || (evt.charCode >= 97 && evt.charCode <= 122)) {
 
                         } else {
                             evt.preventDefault();

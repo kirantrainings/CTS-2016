@@ -3,7 +3,9 @@
 <head>
     <link rel="stylesheet" href="content/css/bootstrap.css">
     <link rel="stylesheet" href="content/css/bootstrap-theme.css">
+    <link rel="stylesheet" href="content/css/jquery.bxslider.css">
     <script src="vendor/jquery-2.2.0.js"></script>
+    <script src="vendor/jquery.bxslider.min.js"></script>
     <script src="vendor/bootstrap.js"></script>
     <script src="vendor/angular.min.js"></script>
 </head>
@@ -11,8 +13,9 @@
 <body>
     <div class="content" ng-controller="mainCtrl">
         <!-- <div ng-include="'app/common/header.html'"> </div>-->
-        <app-header></app-header>
+
         <div ng-include="contentUrl"> </div>
+        <bx-slider></bx-slider>
     </div>
 
     <script src="app/vehicles/vehicles.js"></script>
@@ -32,6 +35,8 @@
     <script src="app/components/components.js"></script>
     <script src="app/components/appHeader/appHeader.js"></script>
     <script src="app/components/validators/alphabetsOnly.js"></script>
+    <script src="app/components/validators/numbersOnly.js"></script>
+    <script src="app/components/caurosel/bxSlider.js"></script>
     <script src="app/app.js"></script>
 </body>
 
