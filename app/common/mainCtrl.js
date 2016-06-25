@@ -1,12 +1,17 @@
 angular.module('common')
     .controller("mainCtrl", ['$scope', function ($scope) {
+        $scope.companyName = "Cognizant";
+        $scope.navItems = [{
+                name: "vehciles",
+                contentUrl: "app/vehicles/vehicle.html"
+            },
+            {
+                name: "register",
+                contentUrl: "app/register/register.html"
+            }];
+
+
         $scope.loadContent = function (type) {
-            console.log(type);
-            if (type == 'vehicles') {
-                $scope.contentUrl = "app/vehicles/vehicle.html";
-            }
-            if (type == 'register') {
-                $scope.contentUrl = "app/register/register.html";
-            }
+            $scope.contentUrl = type.contentUrl;
         };
     }]);

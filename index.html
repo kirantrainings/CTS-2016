@@ -12,10 +12,14 @@
 
 <body>
     <div class="content" ng-controller="mainCtrl">
-        <!-- <div ng-include="'app/common/header.html'"> </div>-->
-
+        <!-- <div ng-include="'app/common/header.html'"> </div><--></-->
+        <div custom-header 
+            
+        brand="{{companyName}}" 
+        handle-tab-click="loadContent(item)"    
+        tabs="navItems">
+        </div>
         <div ng-include="contentUrl"> </div>
-        <bx-slider></bx-slider>
     </div>
 
     <script src="app/vehicles/vehicles.js"></script>
@@ -37,6 +41,7 @@
     <script src="app/components/validators/alphabetsOnly.js"></script>
     <script src="app/components/validators/numbersOnly.js"></script>
     <script src="app/components/caurosel/bxSlider.js"></script>
+    <script src="app/components/appHeader/customHeader.js"></script>
     <script src="app/app.js"></script>
 </body>
 
