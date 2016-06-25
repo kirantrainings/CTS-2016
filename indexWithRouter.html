@@ -1,0 +1,51 @@
+<html ng-app="vehicleApp">
+
+<head>
+    <link rel="stylesheet" href="content/css/bootstrap.css">
+    <link rel="stylesheet" href="content/css/bootstrap-theme.css">
+    <link rel="stylesheet" href="content/css/jquery.bxslider.css">
+    <script src="vendor/jquery-2.2.0.js"></script>
+    <script src="vendor/jquery.bxslider.min.js"></script>
+    <script src="vendor/bootstrap.js"></script>
+    <script src="vendor/angular.min.js"></script>
+    <script src="vendor/angular-ui-router.js"></script>
+</head>
+
+<body>
+    <div class="content" ng-controller="routeCtrl">
+        <!-- <div>
+            <a ui-sref="vehicles">Vehicles</a>
+            <a ui-sref="register">Register</a>
+        </div>-->
+        <div>
+            <a href="" ng-click="handleClick('vehicles')">Vehicles</a>
+            <a href="" ng-click="handleClick('register')">Register</a>
+        </div>
+        <div ui-view></div>
+    </div>
+
+    <script src="app/vehicles/vehicles.js"></script>
+    <script src="app/login/login.js"></script>
+    <!--Register-->
+    <script src="app/register/register.js"></script>
+    <script src="app/register/registerCtrl.js"></script>
+    <!--end of Register-->
+    <script src="app/vehicles/vehicles.js"></script>
+    <script src="app/vehicles/vehicleSvc.js"></script>
+
+    <script src="app/common/common.js"></script>
+    <script src="app/common/mainCtrl.js"></script>
+
+
+    <!--Components-->
+    <script src="app/components/components.js"></script>
+    <script src="app/components/appHeader/appHeader.js"></script>
+    <script src="app/components/validators/alphabetsOnly.js"></script>
+    <script src="app/components/validators/numbersOnly.js"></script>
+    <script src="app/components/caurosel/bxSlider.js"></script>
+    <script src="app/components/appHeader/customHeader.js"></script>
+    <script src="app/app.js"></script>
+    <script src="app/router/routeCtrl.js"></script>
+</body>
+
+</html>

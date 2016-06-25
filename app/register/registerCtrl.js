@@ -1,5 +1,5 @@
 angular.module('register')
-    .controller("registerCtrl", ['$scope', function ($scope) {
+    .controller("registerCtrl", ['$scope', '$state', function ($scope, $state) {
 
         $scope.registerUser = {};
         $scope.countries = [{
