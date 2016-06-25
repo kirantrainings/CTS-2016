@@ -9,6 +9,16 @@
                     tabs: "=",
                     brand: "@",
                     handleTabClick: "&"
+                },
+                controller: function ($scope, $rootScope) {
+                    $scope.productCount = 0;
+
+                    $scope.$on('VEHICLE-ADDED', function (evt, arg) {
+                        $scope.productCount++;
+                    });
+                    $scope.$on('VEHICLE-REMOVED', function (evt, arg) {
+                        $scope.productCount--;
+                    })
                 }
             };
         }]);

@@ -49,16 +49,32 @@ angular.module('vehicles')
 
 
 angular.module('vehicles')
-    .controller('vehicleCtrl', ['$scope', 'vehicleSvc', function ($scope, vehicleSvc) {
+    .controller('vehicleCtrl', ['$scope', 'vehicleSvc', '$rootScope',
+                                function ($scope, vehicleSvc, $rootScope) {
 
-        //$scope.vehicles = vehicleSvc.getVehicles();
+            //$scope.vehicles = vehicleSvc.getVehicles();
 
-        vehicleSvc.getVehiclesFromJson()
-            .then(function (response) {
-                console.log(response);
-                $scope.vehicles = response.data.vehicles;
+            vehicleSvc.getVehiclesFromJson()
+                .then(function (response) {
+                    console.log(response);
+                    $scope.vehicles = response.data.vehicles;
 
-            }).catch(function (errorResponse) {
-                console.log(errorResponse);
-            });
+                }).catch(function (errorResponse) {
+                    console.log(errorResponse);
+                });
+
+            $scope.addVehicleToCheckout = function (item) {
+                $rootScope.$broadcast("VEHICLE-ADDED", {
+                    data: item
+                });
+
+            };
+            $scope.removeVehicleToCheckout = function (item) {
+                $rootScope.$broadcast("VEHICLE-REMOVED", {
+                    data: item
+                });
+
+            };
+
+
 }]);

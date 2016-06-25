@@ -12,7 +12,11 @@
     <!-- Collection of nav links, forms, and other content for toggling -->
     <div id="navbarCollapse" class="collapse navbar-collapse">
         <ul class="nav navbar-nav">
-            <li class="active" ng-repeat="tab in tabs"><a href="" ng-click="handleTabClick({item:tab})">{{tab.name}}</a></li>
+            <li class="active" ng-repeat="tab in tabs"><a href="" ng-click="handleTabClick({item:tab})">{{::tab.name}}</a></li>
+
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">{{productCount}}</a></li>
 
         </ul>
     </div>
